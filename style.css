@@ -33,40 +33,67 @@ body {
 .wrapper {
   min-width: 320px;
   height: 100vh;
-  background: #FFF;
+  background: #fff;
   padding: 20px 0px;
   box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
 }
-.header{
+.header {
   margin: 10px 0px 20px 10px;
   display: flex;
   margin-left: 20px;
+}
+.logo {
+  margin-left: 20px;
+}
+.checkstatus {
+  margin-left: auto;
+  margin-right: 20px;
+}
 
-}
-.logo{
-  margin-left:20px ;
-}
-.checkstatus{
-margin-left: auto;
-margin-right: 20px;
-}
-
-ul {
-  list-style: none;
+nav {
   margin-left: 10px;
 }
-li {
+img{
+  cursor: pointer;
+}
+button {
+  position: relative;
   padding: 10px;
   margin: 10px 0px;
   background: white;
+  border: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+}
+button:focus{
+  color: #7E7E82;
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #41f6d7;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  opacity: 0;
+  position: absolute;
+  left: -10px;
+}
+button:focus:before{
+  opacity: 1;
+  
 }
 .footer {
   display: flex;
   flex-direction: column;
-margin:auto 0px 10px 20px ;
-
+  margin: auto 0px 10px 20px;
 }
 .footer img {
   width: 40px;
@@ -81,11 +108,23 @@ a {
   text-decoration: none;
   margin-bottom: 15px;
 }
-.number{
+.number {
   font-weight: 700;
   font-size: 25px;
-   font-family: "TT Lakes Bold";
+  font-family: "TT Lakes Bold";
 }
-.lang{
+.lang {
   margin-top: 20px;
+  display:flex;
+  gap: 10px;
+
+}
+.ru:hover{
+  color: #7E7E82;
+}
+.eng:hover{
+  color: #7E7E82;
+}
+.ch:hover{
+  color: #7E7E82;
 }
